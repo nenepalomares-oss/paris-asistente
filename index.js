@@ -18,7 +18,7 @@ app.post("/paris", async (req, res) => {
         "Authorization": `Bearer ${process.env.OPENAI_KEY}`
       },
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-3.5-turbo",
         messages: [
           { role: "system", content: "Eres Paris, una asistente amable y profesional." },
           { role: "user", content: userMessage }
@@ -56,3 +56,4 @@ app.post("/paris", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Servidor Paris listo"));
+
